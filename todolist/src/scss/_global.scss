@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.animation-stopper * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+body {
+    background: $bg-dark;
+    background-image: linear-gradient(to right bottom, $bg-light 0%, $bg-dark 60%);
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top:80px;
+
+    * {
+        font-family: $font-sans-serif;
+        color: $white;
+
+        &:focus,
+        &:focus {
+            outline: none;
+        }
+    }
+
+    input {
+        padding: 12px 20px;
+        background: $bg-input;
+        border-radius: 10px;
+        border: none;
+        border: 1px solid transparent;
+        transition: border .4s;
+        box-sizing: border-box;
+
+
+        &:focus {
+            border: 1px solid $action-dark;
+        }
+
+        &.input-edit {
+            padding: 6px 12px;
+        }
+    }
+
+    .btn {
+
+        background-size: 300% 100%;
+        color: $white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: opacity .4s;
+        transition: all .4s ease-in-out;
+        box-shadow: 0 0px 10px 0 rgba(100, 49, 196, 0.267);
+
+
+        @include hover {
+            background-position: 100% 0;
+        }
+
+        &__primary {
+            background-color: $action-dark;
+            background-image: linear-gradient(to right, $action-light, $action-dark, $action-dark, $action-light);
+        }
+
+        &__danger {
+            background-color: $red-dark;
+            background-image: linear-gradient(to right, $red-light, $red-dark, $red-dark, $red-light);
+            box-shadow: 0 0px 10px 0 rgba(196, 49, 49, 0.267);
+        }
+
+        &__small {
+            font-size: 13px;
+            padding: 5px 20px;
+        }
+    }
+}

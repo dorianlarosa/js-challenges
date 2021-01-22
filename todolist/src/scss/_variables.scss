@@ -1,0 +1,44 @@
+//////////
+// COLOR
+//////////
+
+$white: #fff;
+
+$bg-dark: #0c0e13;
+$bg-light: #261b35;
+$action-dark: #59197c;
+$action-light:#a727ea;
+
+$red-dark:#96221e;
+$red-light:#f74e48;
+
+$bg-opacity : #222331a6;
+$bg-input : #2e313e;
+
+
+//////////
+// FONT
+//////////
+
+$font-sans-serif: 'Roboto', sans-serif;
+
+
+
+//////////
+// MIXINS
+//////////
+
+@mixin hover {
+    @media not all and (pointer: coarse) {
+        &:hover {
+            @content;
+        }
+    }
+} 
+
+@mixin hover-detect {
+    @media all and (pointer: coarse) {
+        @content;
+    }
+} 
+ 
